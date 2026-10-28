@@ -1,20 +1,28 @@
-# Ignore all image files
+# Ignore all image files (except our tracked sample outputs under task_mnist/)
 *.jpg
 *.png
 *.jpeg
+!task_mnist/**/*.png
 
 # Ignore pycharm and system files
 .DS_Store
 *.idea
-__pycache__
+__pycache__/
+*.pyc
 *.zip
 
 # Ignore dataset files
 *.csv
 *.json
 
-# Ignore checkpoints
+# Ignore checkpoints (except our tracked trained weights under task_mnist/)
 *.pth
+!task_mnist/**/*.pth
 
 # Ignore pickle files
 *.pkl
+
+# Virtual environment and downloaded dataset cache
+venv/
+data/
+.ipynb_checkpoints/

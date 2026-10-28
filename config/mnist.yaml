@@ -1,5 +1,5 @@
 dataset_params:
-  im_path: 'data/train/images'
+  im_path: 'data'
   im_ext : 'png'
   im_channels : 1
   im_size : 28
@@ -19,10 +19,10 @@ model_params:
 
 train_params:
   task_name: 'task_mnist'
-  batch_size: 64
+  batch_size: 128
   num_epochs: 20
   num_samples : 100
   num_grid_rows : 10
-  save_sample_steps : 50
+  save_sample_steps : 100
   lr: 0.0005
   ckpt_name: 'mnist_ckpt.pth'

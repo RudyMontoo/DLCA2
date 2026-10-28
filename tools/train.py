@@ -9,7 +9,6 @@ from tqdm import tqdm
 from torch.optim import Adam
 from model.dcgan import Generator, Discriminator
 from dataset.mnist_dataset import MnistDataset
-from dataset.celeb_dataset import CelebDataset
 from torch.utils.data import DataLoader
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -31,8 +30,7 @@ def train(args):
     
     # Create the dataset
     im_dataset_cls = {
-        'mnist': MnistDataset,
-        'celeb': CelebDataset
+        'mnist': MnistDataset
     }.get(dataset_config['name'])
     
     im_dataset = im_dataset_cls(split='train',
